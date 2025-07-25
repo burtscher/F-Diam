@@ -11,7 +11,7 @@ Follow these instructions to install, compile, and run the code.
 1. Clone the code using "git clone https://github.com/burtscher/F-Diam.git"
 2. Navigate to the F-Diam directory with "cd F-Diam"
 3. Execute "make"
-4. Run "./fdiam graphs/"
+4. Run "./fdiam graphs/kron_g500-logn21.egr"
 
 Example graphs are downloaded as part of the installation. To convert your own graphs in our format, follow the instructions at:
 
