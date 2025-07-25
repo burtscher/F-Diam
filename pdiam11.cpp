@@ -1,3 +1,41 @@
+/*
+F-Diam is a C++/OpenMP code for quickly computing the exact diameter of large sparse graphs.
+
+BSD 3-Clause License
+
+Copyright (c) 2025, Cameron Bradley, Anju Mongandampulath Akathoott, and Martin Burtscher
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+URL: The latest version of this code is available at https://github.com/burtscher/F-Diam.git.
+
+Sponsor: 
+*/
+
 #include <cstdlib>
 #include <cstdio>
 #include <algorithm>
@@ -344,7 +382,7 @@ static void remove_chains(int& diameter)
 int main(int argc, char* argv [])
 {
   printf("CPU parallel graph diameter v01 (%s)\n", __FILE__);
-  printf("Copyright 2024 Texas State University\n\n");
+  printf("Copyright 2025 Texas State University\n\n");
 
   if (argc < 2) {printf("USAGE: %s input_file\n", argv[0]); exit(-1);}
 
@@ -452,8 +490,7 @@ int main(int argc, char* argv [])
   // determine initial diameter
   int sum, dummy;
   const int diam = distance(max_u, sum, 0);
-  if (sum != g.nodes) printf("graph is disconnected: diameter is infinite\n  computing maximum diameter of connected components %d %d\n", sum, g.nodes);
-  printf("max_u %d: %d\n", max_u, diam);
+  if (sum != g.nodes) printf("graph is disconnected: diameter is infinite\ncomputing maximum diameter of connected components\n");
   const int next = wl1[0];  // a node with maximal distance from max_u
   int diameter = distance(next, dummy, diam);
   printf("initial diameter: %d\n", diameter);

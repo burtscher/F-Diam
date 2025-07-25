@@ -1,7 +1,7 @@
 CXX = g++
 CXXFLAGS = -O3 -fopenmp
 TARGET = fdiam
-SRC = pdiam11.cpp
+SRC = fdiam.cpp
 
 all: $(TARGET) setup
 
