@@ -11,8 +11,8 @@ Follow these instructions to install, compile, and run the code.
 1. Clone the code using "git clone https://github.com/burtscher/F-Diam.git"
 2. Navigate to the F-Diam directory with "cd F-Diam"
 3. Execute "make"
-4. Run "./fdiam graphs/kron_g500-logn21.egr"
+4. Run "./fdiam graphs/internet.egr"
 
-Example graphs are downloaded as part of the installation. To convert your own graphs in our format, follow the instructions at:
+An example graph is downloaded as part of the installation. To install the rest of graphs used in the paper, after step 3, use the command "bash setup_full.sh". To convert your own graphs in our format, follow the instructions at:
 
 https://userweb.cs.txstate.edu/~burtscher/research/ECLgraph/index.html
